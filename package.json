@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "docz": "^1.2.0",
+    "docz-theme-default": "^1.2.0"
+  },
+  "dependencies": {
+    "styled-components": "^4.2.0"
+  }
+}
