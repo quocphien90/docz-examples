@@ -1,11 +1,11 @@
 {
-  "vendors.js": "/docz-examples/static/js/vendors.a63f1c7e.js",
-  "vendors.js.map": "/docz-examples/static/js/vendors.00f970b2dba595f849a5.js.map",
-  "app.js": "/docz-examples/static/js/app.00f970b2dba595f849a5.js",
-  "app.js.map": "/docz-examples/static/js/app.00f970b2dba595f849a5.js.map",
-  "site-components-button.js": "/docz-examples/static/js/site-components-button.da8448d4.js",
-  "site-components-button.js.map": "/docz-examples/static/js/site-components-button.00f970b2dba595f849a5.js.map",
+  "vendors.js": "/docz-examples/static/js/vendors.18f1fbca.js",
+  "vendors.js.map": "/docz-examples/static/js/vendors.a0106326d504d66159c7.js.map",
+  "app.js": "/docz-examples/static/js/app.a0106326d504d66159c7.js",
+  "app.js.map": "/docz-examples/static/js/app.a0106326d504d66159c7.js.map",
+  "site-components-button.js": "/docz-examples/static/js/site-components-button.8b09c851.js",
+  "site-components-button.js.map": "/docz-examples/static/js/site-components-button.a0106326d504d66159c7.js.map",
   "site-index.js": "/docz-examples/static/js/site-index.57fcad2d.js",
-  "site-index.js.map": "/docz-examples/static/js/site-index.00f970b2dba595f849a5.js.map",
+  "site-index.js.map": "/docz-examples/static/js/site-index.a0106326d504d66159c7.js.map",
   "index.html": "/docz-examples/index.html"
 }
