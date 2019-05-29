@@ -1,15 +1,11 @@
 {
-  "vendors.js": "/docz-examples/static/js/vendors.10931399.js",
-  "vendors.js.map": "/docz-examples/static/js/vendors.0f878695e0a1cc3e1f05.js.map",
-  "app.js": "/docz-examples/static/js/app.edffa558.js",
-  "app.js.map": "/docz-examples/static/js/app.0f878695e0a1cc3e1f05.js.map",
-  "runtime~app.js": "/docz-examples/static/js/runtime~app.0f878695e0a1cc3e1f05.js",
-  "runtime~app.js.map": "/docz-examples/static/js/runtime~app.0f878695e0a1cc3e1f05.js.map",
-  "site-components-button.js": "/docz-examples/static/js/site-components-button.da9608f8.js",
-  "site-components-button.js.map": "/docz-examples/static/js/site-components-button.0f878695e0a1cc3e1f05.js.map",
-  "site-index.js": "/docz-examples/static/js/site-index.17a0a3c5.js",
-  "site-index.js.map": "/docz-examples/static/js/site-index.0f878695e0a1cc3e1f05.js.map",
-  "static/js/5.ddc508bb.js": "/docz-examples/static/js/5.ddc508bb.js",
-  "static/js/5.0f878695e0a1cc3e1f05.js.map": "/docz-examples/static/js/5.0f878695e0a1cc3e1f05.js.map",
+  "vendors.js": "/docz-examples/static/js/vendors.a63f1c7e.js",
+  "vendors.js.map": "/docz-examples/static/js/vendors.7743476138c02be81bc7.js.map",
+  "app.js": "/docz-examples/static/js/app.7743476138c02be81bc7.js",
+  "app.js.map": "/docz-examples/static/js/app.7743476138c02be81bc7.js.map",
+  "site-components-button.js": "/docz-examples/static/js/site-components-button.022c5dd8.js",
+  "site-components-button.js.map": "/docz-examples/static/js/site-components-button.7743476138c02be81bc7.js.map",
+  "site-index.js": "/docz-examples/static/js/site-index.57fcad2d.js",
+  "site-index.js.map": "/docz-examples/static/js/site-index.7743476138c02be81bc7.js.map",
   "index.html": "/docz-examples/index.html"
 }
