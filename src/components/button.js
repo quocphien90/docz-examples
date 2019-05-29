@@ -58,8 +58,8 @@ const ButtonStyled = styled('button')`
   border-radius: 3px;
 `
 
-export const Button = ({ children, ...props }) => (
-  <ButtonStyled {...props}>{children}</ButtonStyled>
+const Button = ({ children, ...props }) => (
+ <ButtonStyled {...props}>{children}</ButtonStyled>
 )
 
 Button.propTypes = {
@@ -76,3 +76,5 @@ Button.defaultProps = {
   kind: 'primary',
   outline: false,
 }
+
+export default Button
