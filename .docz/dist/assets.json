@@ -1,0 +1,15 @@
+{
+  "vendors.js": "/static/js/vendors.cc3441fd.js",
+  "vendors.js.map": "/static/js/vendors.c37e96be6bd259e5bf10.js.map",
+  "app.js": "/static/js/app.c37e96be6bd259e5bf10.js",
+  "app.js.map": "/static/js/app.c37e96be6bd259e5bf10.js.map",
+  "site-components-box.js": "/static/js/site-components-box.ff4fcf96.js",
+  "site-components-box.js.map": "/static/js/site-components-box.c37e96be6bd259e5bf10.js.map",
+  "site-components-button.js": "/static/js/site-components-button.35f22bf9.js",
+  "site-components-button.js.map": "/static/js/site-components-button.c37e96be6bd259e5bf10.js.map",
+  "site-components-flex.js": "/static/js/site-components-flex.ecfd0cc8.js",
+  "site-components-flex.js.map": "/static/js/site-components-flex.c37e96be6bd259e5bf10.js.map",
+  "site-index.js": "/static/js/site-index.d9050d59.js",
+  "site-index.js.map": "/static/js/site-index.c37e96be6bd259e5bf10.js.map",
+  "index.html": "/index.html"
+}

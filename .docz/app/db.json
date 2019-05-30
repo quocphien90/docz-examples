@@ -1,25 +1,89 @@
 {
   "config": {
-    "title": "My Doc",
-    "description": "My awesome app using docz",
+    "title": "kintone UI Component",
+    "description": "An UI design language and React-based implementation",
     "menu": [],
+    "version": "0.4.0",
     "repository": null,
     "native": false,
     "codeSandbox": true,
     "themeConfig": {},
-    "separator": "-"
+    "separator": "-",
+    "plugins": [
+      {}
+    ],
+    "hashRouter": true
   },
+  "props": [],
   "entries": [
     {
-      "key": "Button.mdx",
+      "key": "site/index.mdx",
+      "value": {
+        "name": "Getting Started",
+        "route": "/",
+        "id": "d4477e00b78d59f674f30b0ac40d2ad6",
+        "filepath": "site/index.mdx",
+        "link": "",
+        "slug": "site-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started",
+            "depth": 1,
+            "value": "Getting Started"
+          },
+          {
+            "slug": "installation",
+            "depth": 2,
+            "value": "Installation"
+          },
+          {
+            "slug": "via-yarn",
+            "depth": 3,
+            "value": "via yarn"
+          },
+          {
+            "slug": "via-npm",
+            "depth": 3,
+            "value": "via npm"
+          },
+          {
+            "slug": "using",
+            "depth": 2,
+            "value": "Using"
+          }
+        ]
+      }
+    },
+    {
+      "key": "site/components/box.mdx",
+      "value": {
+        "name": "Box",
+        "menu": "Components",
+        "route": "/components/box",
+        "id": "8fba4c5791bac684f99a6f6642934ec9",
+        "filepath": "site/components/box.mdx",
+        "link": "",
+        "slug": "site-components-box",
+        "headings": [
+          {
+            "slug": "box",
+            "depth": 1,
+            "value": "Box"
+          }
+        ]
+      }
+    },
+    {
+      "key": "site/components/button.mdx",
       "value": {
         "name": "Button",
-        "id": "24f307fc6a7964b1db3b978e6242def0",
-        "filepath": "Button.mdx",
+        "menu": "Components",
+        "route": "/components/button",
+        "id": "d179fa77c7d4947d45868b1e0e6177ce",
+        "filepath": "site/components/button.mdx",
         "link": "",
-        "slug": "button",
-        "route": "/button",
-        "menu": "",
+        "slug": "site-components-button",
         "headings": [
           {
             "slug": "button",
@@ -27,13 +91,31 @@
             "value": "Button"
           },
           {
-            "slug": "basic-usage",
+            "slug": "default",
             "depth": 2,
-            "value": "Basic usage"
+            "value": "Default"
+          }
+        ]
+      }
+    },
+    {
+      "key": "site/components/flex.mdx",
+      "value": {
+        "name": "Flex",
+        "menu": "Components",
+        "route": "/components/flex",
+        "id": "3064eae322db53e8e35c588512be712c",
+        "filepath": "site/components/flex.mdx",
+        "link": "",
+        "slug": "site-components-flex",
+        "headings": [
+          {
+            "slug": "flex",
+            "depth": 1,
+            "value": "Flex"
           }
         ]
       }
     }
-  ],
-  "props": []
+  ]
 }
