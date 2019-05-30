@@ -1,80 +1,156 @@
-import React from 'react'
 import styled from 'styled-components'
-import t from 'prop-types'
+import PropTypes from 'prop-types'
+import Flex from './flex'
+import { themed, hexToRgbA } from '../utils'
 
-const scales = {
-  small: `
-    padding: 5px 10px;
-    font-size: 14px;
-  `,
-  normal: `
-    padding: 10px 20px;
-    font-size: 16px;
-  `,
-  big: `
-    padding: 20px 30px;
-    font-size: 18px;
-  `,
-}
+const buttonSize = props => {
+  const { space, fontSizes } = props.theme
+  let paddingTop
+  let paddingBottom
+  let paddingLeft
+  let paddingRight
+  let fontSize
 
-const kind = outline => (bg, color) => {
-  const boxShadowColor = outline ? bg : 'transparent'
-  const backgroundColor = outline ? 'transparent' : bg
+  switch (props.size) {
+    case 'small':
+      paddingTop = space[1]
+      paddingBottom = space[1]
+      paddingLeft = space[2]
+      paddingRight = space[2]
+      fontSize = fontSizes[1]
+      break
 
-  return `
-    background: ${backgroundColor};
-    box-shadow: inset 0 0 0 1px ${boxShadowColor};
-    color: ${outline ? bg : color};
-    transition: all .3s;
+    case 'large':
+      paddingTop = space[3]
+      paddingBottom = space[3]
+      paddingLeft = space[4]
+      paddingRight = space[4]
+      fontSize = fontSizes[3]
+      break
 
-    &:hover {
-      box-shadow: inset 0 0 0 1000px ${boxShadowColor};
-      color: ${color};
-    }
-  `
-}
-
-const kinds = outline => {
-  const get = kind(outline)
+    default:
+      paddingTop = space[2]
+      paddingBottom = space[2]
+      paddingLeft = space[3]
+      paddingRight = space[3]
+      fontSize = fontSizes[2]
+      break
+  }
 
   return {
-    primary: get('#1FB6FF', 'white'),
-    secondary: get('#5352ED', 'white'),
-    cancel: get('#FF4949', 'white'),
-    dark: get('#273444', 'white'),
-    gray: get('#8492A6', 'white'),
+    paddingTop,
+    paddingBottom,
+    paddingLeft,
+    paddingRight,
+    fontSize,
   }
 }
 
-const getScale = ({ scale = 'normal' }) => scales[scale]
-const getKind = ({ kind = 'primary', outline = false }) => kinds(outline)[kind]
+const buttonVariant = props => {
+  const { colors } = props.theme
+  let color
+  let backgroundColor
+  let borderColor
+  let hover
+  let focus
+  let active
 
-const ButtonStyled = styled('button')`
-  ${getKind};
-  ${getScale};
-  cursor: pointer;
-  margin: 3px 5px;
-  border: none;
-  border-radius: 3px;
-`
+  switch (props.variant) {
+    case 'subtle':
+      color = colors.grey[0]
+      backgroundColor = colors.transparent
+      borderColor = colors.default[1]
+      hover = { backgroundColor: colors.default[0] }
+      focus = {
+        zIndex: 1,
+        boxShadow: `${hexToRgbA(colors.primary[0], 0.4)} 0 0 0 3px`,
+      }
+      active = { boxShadow: 'none', backgroundColor: colors.default[1] }
+      break
+    case 'primary':
+      color = colors.white
+      backgroundColor = colors.primary[0]
+      borderColor = colors.primary[1]
+      hover = { backgroundColor: colors.primary[1] }
+      focus = {
+        zIndex: 1,
+        boxShadow: `${hexToRgbA(colors.primary[0], 0.4)} 0 0 0 3px`,
+      }
+      active = { boxShadow: 'none', backgroundColor: colors.primary[2] }
+      break
+    case 'danger':
+      color = colors.danger[0]
+      backgroundColor = colors.default[0]
+      borderColor = colors.default[1]
+      hover = {
+        color: colors.white,
+        borderColor: colors.danger[1],
+        backgroundColor: colors.danger[0],
+      }
+      focus = {
+        zIndex: 1,
+        boxShadow: `${hexToRgbA(colors.danger[0], 0.4)} 0 0 0 3px`,
+      }
+      active = { boxShadow: 'none', backgroundColor: colors.danger[1] }
+      break
 
-const Button = ({ children, ...props }) => (
- <ButtonStyled {...props}>{children}</ButtonStyled>
+    default:
+      color = colors.grey[0]
+      backgroundColor = colors.default[0]
+      borderColor = colors.default[0]
+      hover = {
+        borderColor: colors.default[2],
+        backgroundColor: colors.default[1],
+      }
+      focus = {
+        zIndex: 1,
+        borderColor: colors.default[2],
+        boxShadow: `${hexToRgbA(colors.primary[0], 0.4)} 0 0 0 3px`,
+      }
+      active = { boxShadow: 'none', backgroundColor: colors.default[2] }
+      break
+  }
+
+  return {
+    color,
+    backgroundColor,
+    borderColor,
+    '&:hover': hover,
+    '&:focus': focus,
+    '&:active': active,
+  }
+}
+
+const Button = styled(Flex)(
+  props => ({
+    outline: 'none',
+    alignSelf: 'center',
+    textDecoration: 'none',
+    fontWeight: 'normal',
+    cursor: 'pointer',
+    border: 0,
+    borderRadius: 4,
+    width: props.full ? '100%' : 'auto',
+    '&:disabled': {
+      opacity: 0.5,
+      pointerEvents: 'none',
+      cursor: 'default',
+    },
+  }),
+  buttonVariant,
+  buttonSize,
+  themed('Button')
 )
 
 Button.propTypes = {
-  /**
-   * This is a pretty good description for this prop
-   */
-  scales: t.oneOf(['small', 'normal', 'big']),
-  kind: t.oneOf(['primary', 'secondary', 'cancel', 'dark', 'gray']),
-  outline: t.bool.isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  variant: PropTypes.oneOf(['default', 'primary', 'danger', 'subtle']),
 }
 
 Button.defaultProps = {
-  scales: 'normal',
-  kind: 'primary',
-  outline: false,
+  as: 'button',
+  justifyContent: 'center',
+  m: 0,
 }
 
 export default Button

@@ -4,17 +4,13 @@ menu: Components
 route: /components/button
 ---
 
-import { Playground, Props } from 'docz'
-import { Button } from '../../src'
-
-
 # Button
 
-<Props of={Button} />
+import { Playground } from 'docz'
+import { Button } from '@kintone/kintone-ui-component'
 
-## Basic usage
+## Default
 
 <Playground>
-  <Button>Click me</Button>
-  <Button kind="secondary">Click me</Button>
+  <Button text="Submit" />
 </Playground>
