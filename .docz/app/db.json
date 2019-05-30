@@ -14,7 +14,6 @@
     ],
     "hashRouter": true
   },
-  "props": [],
   "entries": [
     {
       "key": "site/index.mdx",
@@ -51,25 +50,6 @@
             "slug": "using",
             "depth": 2,
             "value": "Using"
-          }
-        ]
-      }
-    },
-    {
-      "key": "site/components/box.mdx",
-      "value": {
-        "name": "Box",
-        "menu": "Components",
-        "route": "/components/box",
-        "id": "8fba4c5791bac684f99a6f6642934ec9",
-        "filepath": "site/components/box.mdx",
-        "link": "",
-        "slug": "site-components-box",
-        "headings": [
-          {
-            "slug": "box",
-            "depth": 1,
-            "value": "Box"
           }
         ]
       }
@@ -116,6 +96,26 @@
           }
         ]
       }
+    },
+    {
+      "key": "site/components/box.mdx",
+      "value": {
+        "name": "Box",
+        "menu": "Components",
+        "route": "/components/box",
+        "id": "8fba4c5791bac684f99a6f6642934ec9",
+        "filepath": "site/components/box.mdx",
+        "link": "",
+        "slug": "site-components-box",
+        "headings": [
+          {
+            "slug": "box",
+            "depth": 1,
+            "value": "Box"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "props": []
 }
